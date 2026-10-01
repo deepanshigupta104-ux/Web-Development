@@ -1,0 +1,131 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Background Image Styling */
+body > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0. 1;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 80px;
+  background: #e23744;
+  border-bottom: 2px solid #fff;
+}
+
+.logo img {
+  height: 50px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #f8f8f8;
+  font-size: 16px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+header ul li a:hover {
+  opacity: 0.75;
+}
+
+/* Main Content Wrapper */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  
+}
+
+/* Injecting content styling dynamically matched with tags */
+main  p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  
+  margin-bottom: 25px;
+
+}
+
+input {
+  width: 50%;
+  max-width: 600px;
+  padding: 18px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 0.9rem;
+  background: #e23744
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  header ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  input {
+    width: 85%;
+  }
+}
