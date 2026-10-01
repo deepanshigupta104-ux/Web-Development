@@ -69,6 +69,9 @@ main {
   align-items: center;
   text-align: center;
   padding: 40px 20px;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+              url("../bg.jpg") center / cover no-repeat;
+
   
 }
 
@@ -78,8 +81,14 @@ main  p {
   font-weight: 600;
   
   margin-bottom: 25px;
+  color: #fff;
 
 }
+main img {
+    height: 110px;
+    margin-bottom: 10px;
+}
+
 
 input {
   width: 50%;
