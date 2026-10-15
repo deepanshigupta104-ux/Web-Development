@@ -21,15 +21,41 @@ body{
 
 }
 .header{
-    background-color: aliceblue;
+    background-color:aliceblue;
     border-bottom: #2e2e2e33 solid px;
     border-color: black;
     
 }
 .header-overlay{
-    padding: 20px 40px;
+    padding: 30px 40px;
     width: 90%;
-    background-color: aqua;
+    background-color:grey;
+
+}
+nav>ul{
+    list-style: none;
+    gap: 30px;
+    font-size: 20px;
+
+}
+.header-overlay>ul{
+    list-style: none;
+    gap: 20px;
+    font-size: 20px;
+    a{
+    color: var(--text-color);
+
+
+    }
+}
+.hero{
+    background-image: url("https://htmldemo.net/destry/destry/assets/images/slider/slide-1.jpg");
+    width:100% ;
+    height:100%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+
 
 }
 
