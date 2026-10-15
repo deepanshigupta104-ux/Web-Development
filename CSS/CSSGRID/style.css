@@ -12,39 +12,55 @@ html, body{
     display: grid;
     grid-template-columns: repeat(3,300px);
     grid-template-rows: 100px 200px 200px 100px;
+    grid-template-areas: "a a a"
+    "b c c"
+    "b d e"
+    "f f f";
     gap: 20px;
 }
 .box1{
     background-color: aqua;
-    grid-column-start: 1;
+    /*grid-column-start: 1;
     grid-column-end: 4;
+    grid-area: b;*/
+    grid-area: a;
 }
 .box2{
     background-color: lightblue;
-    grid-row-start: 2;
+    /*grid-row-start: 2;
     grid-row-end: 4;
+    grid-row: 2/4;*/
+    grid-area: b;
 
 }
 .box3{
     background-color:lightcoral;
-    grid-row-start: 2;
+    /*grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 4;
+    /* grid row: 2/3;
+    grid-column: 2/4;*/
+    /*grid-area: 2/2/3/4*/
+    grid-area: c;
+
 }
 .box4{
     background-color: lightgreen;
+    grid-area:d;
 }
 .box5{
     background-color: bisque;
+    grid-area: e;
 
 }
 .box6{
-    background-color: lightblue;
-    grid-row-start: 4;
+    background-color:pink;
+    /*grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 4;*/
+    grid-area: f;
 
 
 }
