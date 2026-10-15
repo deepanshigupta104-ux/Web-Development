@@ -1,19 +1,33 @@
+
 *{
     margin: 0;
     padding: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
 
 }
-.card{
-    width:300px;
-    height: 20px;
-    border: 1px solid black;
-    padding:10px;
-    
-    
+body{
+    background-color: aliceblue;
 }
-.cognitive{
-    background-color: aqua;
-    color:white;
-    padding :15px;
+.hero{
+    width:400px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+}
+.heading{
+    background-color: #6b7be0;
     border-radius: 3px;
 }
+.hero_container{
+    padding: 25px;
+
+}
+.non_it_roles{
+    border: 0px;
+}
+.
