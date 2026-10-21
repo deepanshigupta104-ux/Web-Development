@@ -1,4 +1,4 @@
-*{
+/**{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,11 +9,9 @@ html,body{
 }
 body{
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-p{
+    align-items: center;*/
+    justi
+/*p{
     font-size: 50px;
     text-shadow: 0px 0px 10px black ;
 
@@ -28,4 +26,4 @@ p{
 }
 .box:hover{
     box-shadow: 0px 0px 30px 2px #0000004a;
-}
+}*/
