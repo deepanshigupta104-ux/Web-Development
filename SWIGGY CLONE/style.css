@@ -6,8 +6,24 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #02060c;
+  overflow-x: hidden;
 }
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 
 header {
   background: #ff5200;
@@ -22,7 +38,8 @@ header {
 
 .logo img {
   width: 160px;
-  height: 48px;
+  height: auto;
+  display: block;
 }
 
 .nav-links {
@@ -35,13 +52,14 @@ header {
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .get-app {
   border: 1px solid white;
   padding: 12px 20px;
   border-radius: 12px;
+  display: inline-block;
 }
 
 .sign-in {
@@ -50,11 +68,12 @@ header {
   border: none;
   padding: 14px 28px;
   border-radius: 14px;
-  font-weight: bold;
+  font-family: inherit;
+  font-weight: 600;
   cursor: pointer;
 }
 
-
+/* ---------- HERO / SEARCH ---------- */
 .search-section {
   background: #ff5200;
   padding: 60px 20px 40px;
@@ -90,8 +109,10 @@ header {
 .location-box input,
 .search-box input {
   flex: 1;
+  min-width: 0;
   border: none;
   outline: none;
+  font-family: inherit;
   font-size: 16px;
   color: #333;
 }
@@ -106,6 +127,7 @@ header {
   color: #555;
 }
 
+/* ---------- SERVICE CARDS ---------- */
 .cards-section {
   background: #ff5200;
   display: flex;
@@ -128,22 +150,16 @@ header {
   border-radius: 28px;
 }
 
-
 .side-img {
   position: absolute;
   width: 220px;
-}
-
-.left-img {
-  left: 0;
   top: 0;
 }
 
-.right-img {
-  right: 0;
-  top: 0;
-}
+.left-img { left: 0; }
+.right-img { right: 0; }
 
+/* ---------- FOOD OPTIONS ---------- */
 .food-section {
   padding: 60px 80px;
   background: white;
@@ -157,7 +173,7 @@ header {
 
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   grid-auto-columns: 144px;
   grid-auto-flow: column;
   gap: 30px 20px;
@@ -182,22 +198,28 @@ header {
 .food-item p {
   margin-top: 10px;
   font-size: 18px;
+  text-align: center;
 }
+
+/* ---------- INSTAMART ---------- */
 .instamart-options {
   max-width: 1200px;
   margin: 60px auto;
   padding: 0 20px;
 }
+
 .instamart-options .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
 }
+
 .instamart-options h2 {
   font-size: 24px;
   font-weight: 700;
 }
+
 .instamart-grid {
   display: flex;
   gap: 24px;
@@ -205,11 +227,13 @@ header {
   scroll-snap-type: x mandatory;
   padding-bottom: 10px;
 }
+
 .insta-item {
   min-width: 140px;
   text-align: center;
   scroll-snap-align: start;
 }
+
 .insta-item img {
   width: 140px;
   height: 160px;
@@ -217,12 +241,14 @@ header {
   background: #f0f0f5;
   border-radius: 12px;
 }
+
 .insta-item p {
   margin-top: 10px;
   font-weight: 600;
   font-size: 15px;
 }
 
+/* ---------- DINEOUT ---------- */
 .dineout-section {
   padding: 40px 80px 60px;
   background: white;
@@ -232,7 +258,7 @@ header {
   display: flex;
   gap: 24px;
   overflow-x: auto;
-  padding: 10px 0;
+  padding: 10px 4px 20px;
 }
 
 .rest-card {
@@ -241,7 +267,7 @@ header {
   background-color: white;
   border-radius: 16px;
   height: fit-content;
-  filter: drop-shadow(0 0 8px rgba(27, 30, 36, 0.08));
+  box-shadow: 0 2px 10px rgba(27, 30, 36, 0.1);
   border: 1px solid rgba(2, 6, 12, 0.08);
   text-decoration: none;
   display: block;
@@ -252,9 +278,21 @@ header {
 .rest-img {
   position: relative;
   height: 200px;
-  border-radius: 16px 16px 0 0;
   background-size: cover;
   background-position: center;
+}
+
+.img-culture {
+  background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1681380359/d1d476fbf46ed5e320c9da02adbd6180.jpg');
+}
+.img-chowringhee {
+  background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1677667302/777080183afaa3ca8da7ead9064bcd40.jpg');
+}
+.img-candy {
+  background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2024/8/17/2bf45513-20ca-4b27-86aa-9f6c6f01601f_20240817T040042312.jpg');
+}
+.img-aerodine {
+  background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1686139526/bd02f69397471a91cb101a81465bc538.jpg');
 }
 
 .rest-overlay {
@@ -275,7 +313,7 @@ header {
 }
 
 .rating {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .rest-info {
@@ -285,7 +323,8 @@ header {
 .info-row {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  gap: 8px;
+  font-size: 13px;
   color: #3d4152;
 }
 
@@ -299,7 +338,7 @@ header {
   justify-content: space-between;
   background: #1ba672;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 14px;
   padding: 10px 12px;
   border-radius: 10px;
@@ -320,11 +359,14 @@ header {
   color: #3d4152;
   margin: 10px 12px 14px;
 }
-app-banner{
+
+/* ---------- APP BANNER ---------- */
+.app-banner {
   background: white;
   padding: 20px 80px 40px;
 }
-.app-banner img{
+
+.app-banner img {
   display: block;
   width: 100%;
   max-width: 992px;
@@ -332,6 +374,7 @@ app-banner{
   object-fit: contain;
 }
 
+/* ---------- CITIES ---------- */
 .cities-section {
   background: white;
   padding: 40px 80px 60px;
@@ -349,23 +392,21 @@ app-banner{
   align-items: center;
   text-align: center;
   padding: 16px;
-  box-sizing: border-box;
   border: 1.5px solid rgba(2, 6, 12, 0.15);
   border-radius: 12px;
   width: calc(25% - 12px);
-  height: auto;
   text-decoration: none;
   cursor: pointer;
   color: #3d4152;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .show-more {
   color: #ff5200;
-  font-weight: bold;
+  font-weight: 600;
   gap: 8px;
 }
-
 
 /* ---------- FOOTER ---------- */
 .footer {
@@ -382,10 +423,17 @@ app-banner{
 }
 
 .footer-logo {
-  color: #ff5200;
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  display: inline-block;
+  background: #ff5200;
+  padding: 10px 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.footer-logo img {
+  display: block;
+  width: 110px;
+  height: auto;
 }
 
 .footer-brand p {
@@ -425,6 +473,7 @@ app-banner{
   border-radius: 8px;
   background: transparent;
   color: #3d4152;
+  font-family: inherit;
 }
 
 .social-icons {
@@ -437,7 +486,6 @@ app-banner{
   color: #3d4152;
 }
 
-/* Download bar */
 .footer-bottom {
   display: flex;
   justify-content: center;
@@ -489,13 +537,58 @@ app-banner{
   font-weight: 400;
 }
 
-
+/* ---------- TABLET ---------- */
 @media (max-width: 992px) {
+  .navbar { padding: 16px 30px; }
+  .hero-title { font-size: 34px; }
+  .search-row { flex-wrap: wrap; align-items: center; flex-direction: column; }
+  .location-box, .search-box { width: 100%; max-width: 560px; }
+
+  .cards-section { flex-wrap: wrap; padding: 20px 30px 40px; }
+  .card { width: calc(50% - 15px); }
+  .side-img { width: 150px; }
+
+  .food-section, .dineout-section, .cities-section, .app-banner { padding-left: 30px; padding-right: 30px; }
+  .city-box { width: calc(50% - 8px); }
+
   .footer { padding: 40px 30px; }
   .footer-top { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ---------- MOBILE ---------- */
 @media (max-width: 600px) {
-  .footer-top { grid-template-columns: 1fr; }
+  .navbar { padding: 14px 16px; }
+  .logo img { width: 120px; }
+  .nav-links li:not(:last-child) { display: none; }
+  .sign-in { padding: 10px 20px; }
+
+  .search-section { padding: 30px 16px 20px; }
+  .hero-title { font-size: 26px; margin-bottom: 24px; }
+  .hero-title br { display: none; }
+  .location-box, .search-box { padding: 14px 16px; }
+
+  .cards-section { padding: 10px 16px 30px; }
+  .card { width: 100%; }
+  .side-img { display: none; }
+
+  .food-section, .dineout-section, .cities-section, .app-banner { padding: 30px 16px; }
+  .instamart-options { margin: 30px auto; padding: 0 16px; }
+  .section-title, .instamart-options h2 { font-size: 20px; }
+
+  .food-grid { grid-auto-columns: 100px; gap: 20px 12px; }
+  .food-item img { width: 100px; height: 100px; }
+  .food-item p { font-size: 14px; }
+
+  .insta-item { min-width: 110px; }
+  .insta-item img { width: 110px; height: 130px; }
+  .insta-item p { font-size: 13px; }
+
+  .rest-card { min-width: 280px; width: 280px; }
+
+  .city-box { width: 100%; }
+
+  .footer { padding: 30px 16px; }
+  .footer-top { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-bottom p { font-size: 18px; }
 }
